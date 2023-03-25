@@ -1,0 +1,54 @@
+class BankCard:
+    def __init__(self, ncard, valid, FiO, CVV):
+        self._ncard = ncard
+        self._valid = valid
+        self._FiO = FiO
+        self._CVV = CVV
+
+    @property
+    def ncard(self):
+        return self._ncard
+
+    @ncard.setter
+    def ncard(self, ncard):
+        self._ncard = ncard
+
+    @property
+    def valid(self):
+        return self._valid
+
+    @valid.setter
+    def valid(self, valid):
+        self._valid = valid
+
+    @property
+    def FiO(self):
+        return self._FiO
+
+    @FiO.setter
+    def FiO(self, FiO):
+        self._FiO = FiO
+
+    @property
+    def CVV(self):
+        return self._CVV
+
+    @CVV.setter
+    def CVV(self, CVV):
+        self._CVV= CVV
+
+BankCard = BankCard("5469 1100 2345 5426", "10/31", "Nikita German", "001")
+print(BankCard.ncard) # "5469 1100 2345 5426"
+print(BankCard.valid) # "10/31"
+print(BankCard.FiO) # "Nikita German"
+print(BankCard.CVV) # "001"
+
+BankCard.ncard = "5469 1100 5432 6245"
+BankCard.valid = "10/25"
+BankCard.FiO = "Nikita Bute"
+BankCard.CVV = "342"
+print("----------------------------------------")
+print(BankCard.ncard) # "5469 1100 5432 6245"
+print(BankCard.valid) # "10/25"
+print(BankCard.FiO) # "Nikita Bute"
+print(BankCard.CVV) # "342"
